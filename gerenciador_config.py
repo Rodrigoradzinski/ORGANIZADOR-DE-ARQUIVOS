@@ -2,8 +2,15 @@ import configparser
 import os
 
 #---------------------------------------------------------------------------
-# MODULO DE GERENCIAMOS DO BANCO .INI
+# MÓDULO DE GERENCIAMENTO DO ARQUIVO .INI
 #---------------------------------------------------------------------------
+# Esta parte do código é responsável por gerenciar as configurações da aplicação
+# usando um arquivo .ini. Ele lê, salva e limpa as configurações armazenadas
+# nesse arquivo. Assim, conseguimos manter e recuperar as preferências do usuário
+# e outras configurações sem precisar mexer no código toda hora.
+#---------------------------------------------------------------------------
+
+
 
 class GerenciadorConfig:
     def __init__(self, nome_arquivo='configuracoes.ini'):
