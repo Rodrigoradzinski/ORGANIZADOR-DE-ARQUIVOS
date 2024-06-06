@@ -1,6 +1,21 @@
 import os
 import shutil
 
+#---------------------------------------------------------------------------
+# AQUI É ONDE TUDO ACONTECE
+#---------------------------------------------------------------------------
+# Nesta parte do código, nos concentramos em toda a lógica para organizar e renomear
+# arquivos nos diretórios que o usuário escolhe.
+# A gente trata várias condições para garantir que cada arquivo seja processado
+# conforme as regras definidas. As principais coisas que fizemos aqui são:
+# - Processar os caminhos fornecidos.
+# - Organizar os arquivos em pastas com base nas extensões ou regras escolhidas.
+# - Renomear os arquivos, podendo configurar para ficar com a primeira letra maiúscula,
+#   tudo em maiúsculas ou tudo em minúsculas, como o usuário preferir.
+# - Ignorar arquivos e extensões que não devem ser alterados.
+#---------------------------------------------------------------------------
+
+
 def organizar_arquivos(caminhos,
                         usar_extensao,
                         excecoes_extensoes,
@@ -30,7 +45,6 @@ def organizar_arquivos(caminhos,
             
             novo_nome = nome
             if habilitar_renomear and (apenas_renomear or not apenas_organizar):
-                # Aplicar renomeação
                 if esquema_renomear == '1maiuscula':
                     novo_nome = nome.capitalize()
                 elif esquema_renomear == 'todasmaiusculas':
